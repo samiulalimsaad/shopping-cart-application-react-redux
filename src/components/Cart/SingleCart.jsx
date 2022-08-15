@@ -1,6 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { decrementHandler, incrementHandler } from "../../redux/actionsCreators";
 
-const SingleCart = ({ name, cart }) => {
+const SingleCart = ({ id, name, cart }) => {
+    const dispatch = useDispatch();
+
     return (
         <div className="flex justify-between border-b-2 mb-2">
             <div className="text-lg py-2">
@@ -8,7 +12,10 @@ const SingleCart = ({ name, cart }) => {
             </div>
             <div className="text-lg py-2">
                 <div className="flex flex-row space-x-2 w-full items-center rounded-lg">
-                    <button className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-1 rounded-full inline-flex items-center">
+                    <button
+                        className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-1 rounded-full inline-flex items-center"
+                        onClick={() => dispatch(decrementHandler(id))}
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-4 w-4"
@@ -25,7 +32,10 @@ const SingleCart = ({ name, cart }) => {
                         </svg>
                     </button>
                     <p>{cart}</p>
-                    <button className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-1 rounded-full inline-flex items-center">
+                    <button
+                        className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-1 rounded-full inline-flex items-center"
+                        onClick={() => dispatch(incrementHandler(id))}
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-4 w-4"

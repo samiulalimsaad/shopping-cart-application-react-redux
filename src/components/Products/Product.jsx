@@ -1,6 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { incrementHandler } from "../../redux/actionsCreators";
 
-const Product = ({ name, quantity, price }) => {
+const Product = ({ id, name, quantity, price }) => {
+    const dispatch = useDispatch();
+
     return (
         <div className="bg-white py-4 px-4 shadow-md rounded-lg my-4 mx-4">
             <div className="flex justify-between px-4 items-center">
@@ -11,7 +15,10 @@ const Product = ({ name, quantity, price }) => {
                     <p className="text-gray-400 text-base">Tk {price}</p>
                 </div>
                 <div className="text-lg font-semibold">
-                    <button className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center">
+                    <button
+                        className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center"
+                        onClick={() => dispatch(incrementHandler(id))}
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6"
