@@ -17,7 +17,7 @@ const Product = ({ id, name, quantity, price }) => {
                 <div className="text-lg font-semibold">
                     <button
                         className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center"
-                        onClick={() => dispatch(incrementHandler(id))}
+                        onClick={() => dispatch(incrementHandler(id, quantity))}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

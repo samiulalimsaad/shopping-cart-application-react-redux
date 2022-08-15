@@ -7,18 +7,27 @@ import {
     INCREMENT_DELL,
 } from "./actionTypes";
 
-export const incrementHandler = (name) => {
+export const incrementHandler = (name, quantity) => {
     if (name === "asus") {
         return {
             type: INCREMENT_ASUS,
+            payload: {
+                asus: { quantity },
+            },
         };
     } else if (name === "dell") {
         return {
             type: INCREMENT_DELL,
+            payload: {
+                dell: { quantity },
+            },
         };
     } else if (name === "canon") {
         return {
             type: INCREMENT_CANON,
+            payload: {
+                canon: { quantity },
+            },
         };
     }
 };

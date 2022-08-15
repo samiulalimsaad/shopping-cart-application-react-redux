@@ -4,7 +4,6 @@ import Products from "./Products";
 
 function CartContainer() {
     const state = useSelector((state) => state);
-    console.log({ state });
     return (
         <div className="bg-gray-50 h-full md:h-screen">
             <div className="bg-gray-50 h-full md:h-screen">

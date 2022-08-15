@@ -1,8 +1,12 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { decrementHandler, incrementHandler } from "../../redux/actionsCreators";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    decrementHandler,
+    incrementHandler,
+} from "../../redux/actionsCreators";
 
-const SingleCart = ({ id, name, cart }) => {
+const SingleCart = ({ id, name, quantity }) => {
+    const cart = useSelector((state) => state[id].total);
     const dispatch = useDispatch();
 
     return (
@@ -34,7 +38,7 @@ const SingleCart = ({ id, name, cart }) => {
                     <p>{cart}</p>
                     <button
                         className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-1 rounded-full inline-flex items-center"
-                        onClick={() => dispatch(incrementHandler(id))}
+                        onClick={() => dispatch(incrementHandler(id, quantity))}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
