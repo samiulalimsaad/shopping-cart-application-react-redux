@@ -1,20 +1,20 @@
 export const products = [
     {
-        id: 0,
+        id: "asus",
         name: "Asus Vivobook X515MA",
         quantity: 20,
-        price: 35500,
+        price: "35,500",
     },
     {
-        id: 1,
+        id: "dell",
         name: "Dell E1916HV 18.5 Inch",
         quantity: 35,
-        price: 9300,
+        price: "9,300",
     },
     {
-        id: 2,
+        id: "canon",
         name: "Canon Eos 4000D 18MP",
         quantity: 72,
-        price: 36500,
+        price: "36,500",
     },
 ];
