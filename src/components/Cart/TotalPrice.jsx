@@ -12,7 +12,9 @@ const TotalPrice = () => {
             <div className="flex justify-center items-center text-center">
                 <div className="text-xl font-semibold">
                     <p>Total Price</p>
-                    <p className="text-5xl">{totalPrice}</p>
+                    <p className="text-5xl">
+                        {totalPrice?.toLocaleString()} TK
+                    </p>
                 </div>
             </div>
         </div>
