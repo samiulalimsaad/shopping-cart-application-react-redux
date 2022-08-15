@@ -28,7 +28,7 @@ const cartReducer = (state = cartInitialState, action) => {
             return {
                 ...state,
                 asus: {
-                    price: state.asus.price * (state.asus.total + 1),
+                    price: 35500 * (state.asus.total + 1),
                     total: state.asus.total + 1,
                 },
             };
@@ -36,7 +36,7 @@ const cartReducer = (state = cartInitialState, action) => {
             return {
                 ...state,
                 asus: {
-                    price: state.asus.price * state.asus.total,
+                    price: 35500 * (state.asus.total - 1),
                     total: state.asus.total - 1,
                 },
             };
@@ -44,7 +44,7 @@ const cartReducer = (state = cartInitialState, action) => {
             return {
                 ...state,
                 dell: {
-                    price: state.dell.price * (state.dell.total + 1),
+                    price: 9300 * (state.dell.total + 1),
                     total: state.dell.total + 1,
                 },
             };
@@ -52,7 +52,7 @@ const cartReducer = (state = cartInitialState, action) => {
             return {
                 ...state,
                 dell: {
-                    price: state.dell.price * state.dell.total,
+                    price: 9300 * (state.dell.total - 1),
                     total: state.dell.total - 1,
                 },
             };
@@ -60,7 +60,7 @@ const cartReducer = (state = cartInitialState, action) => {
             return {
                 ...state,
                 canon: {
-                    price: state.canon.price * (state.canon.total + 1),
+                    price: 36500 * (state.canon.total + 1),
                     total: state.canon.total + 1,
                 },
             };
@@ -68,7 +68,7 @@ const cartReducer = (state = cartInitialState, action) => {
             return {
                 ...state,
                 canon: {
-                    price: state.canon.price * state.canon.total,
+                    price: 36500 * (state.canon.total - 1),
                     total: state.canon.total - 1,
                 },
             };
