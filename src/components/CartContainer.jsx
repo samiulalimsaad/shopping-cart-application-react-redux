@@ -1,4 +1,4 @@
-import CartDetails from "./CartDetails";
+import Cart from "./Cart";
 import Products from "./Products";
 
 function CartContainer() {
@@ -12,7 +12,7 @@ function CartContainer() {
                 </div>
                 <div class="grid grid-cols-12 gap-6">
                     <Products />
-                    <CartDetails />
+                    <Cart />
                 </div>
             </div>
         </div>
