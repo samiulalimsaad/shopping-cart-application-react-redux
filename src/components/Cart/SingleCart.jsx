@@ -9,6 +9,8 @@ const SingleCart = ({ id, name, quantity }) => {
     const cart = useSelector((state) => state[id].total);
     const dispatch = useDispatch();
 
+    if (cart === 0) return null;
+
     return (
         <div className="flex justify-between border-b-2 mb-2">
             <div className="text-lg py-2">
